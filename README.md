@@ -1,1 +1,1 @@
-# 1-inspirational-quotes-th
+# Techdegree Project 1
