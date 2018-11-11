@@ -6,42 +6,33 @@ FSJS project 1 - A Random Quote Generator
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
-/***
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-
-  Recommended:
-    - Add at least one `year` and/or `citation` property to at least one
-      quote object.
-***/
 let quotes = [
   {
-    quote:
+    quote: “There are far, far better things ahead than any we leave behind.”
+    source: "C.S. Lewis"
+    citation:
+    year:
+  },
+  {
+    quote: “What you see and what you hear depends a great deal on where you are standing. It also depends on what sort of person you are.”
+    source: "C.S. Lewis"
+    citation: "The Magician's Nephew"
+    year:
+  },
+  {
+    quote: “A proud man is always looking down on things and people; and, of course, as long as you are looking down, you cannot see something that is above you.”
+    source: "C.S. Lewis"
+    citation: "Mere Christianity"
+    year:
+  },
+  {
+    quote: “Don't use words too big for the subject. Don't say infinitely when you mean very; otherwise you'll have no word left when you want to talk about something really infinite.”
     source:
     citation:
     year:
   },
   {
-    quote:
-    source:
-    citation:
-    year:
-  },
-  {
-    quote:
-    source:
-    citation:
-    year:
-  },
-  {
-    quote:
-    source:
-    citation:
-    year:
-  },
-  {
-    quote:
+    quote: “Miracles are a retelling in small letters of the very same story which is written across the whole world in letters too large for some of us to see.”
     source:
     citation:
     year:
@@ -49,7 +40,7 @@ let quotes = [
 ]
 
 
-
+“The future is something which everyone reaches at the rate of sixty minutes an hour, whatever he does, whoever he is.”
 /***
   Create the `getRandomQuote` function to:
    - generate a random number
