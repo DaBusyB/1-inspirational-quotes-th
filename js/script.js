@@ -1,4 +1,7 @@
-
+const pQuote = document.querySelector('.quote');
+const source = document.querySelector('.source');
+const citation = document.querySelector('.citation');
+const year = document.querySelector('.year');
 
 let quotes = [
   {
@@ -47,14 +50,25 @@ let quotes = [
 
 
 function getRandomQuote() {
-  let randomNum = Math.floor(Math.random() * 7) + 1// generate a random number and store it into a variable
+  let randomNum = Math.floor(Math.random() * 7) + 1 // generate a random number and store it into a variable
   return quotes[randomNum] // random number should return an random quote object from the quotes array
 }
 
 
 function printQuote() {
- let randomNumFunc = getRandomQuote() // call the `getRandomQuote` function and assign it to a variable.
-  // use the properties of the quote object stored in the variable to create your HTML string.
+  //let quoteHTML = document.querySelector('');
+  let randomNumFunc = getRandomQuote() // call the `getRandomQuote` function and assign it to a variable.
+  //let quoteString = "<p>randomNumFunc['quote'] <span>randomNumFunc['source']</span> </p>" // use the properties of the quote object stored in the variable to create your HTML string.
+  pQuote.textContent = randomNumFunc['quote'];
+  source.textContent = randomNumFunc['source'];
+  
+  randomNumFunc['citation'] ?
+  citation.textContent = randomNumFunc['citation'] :
+  null;
+
+  randomNumFunc['year'] ?
+  year.textContent = randomNumFunc['year'] :
+  null;
   // use conditionals to make sure the optional properties exist before they are added to the HTML string.
   // set the `innerHTML` of the `quote-box` div to the HTML string.
 }
