@@ -6,10 +6,8 @@ const body = document.querySelector('body');
 
 let quotes = [
   {
-    quote: "There are far, far better things ahead than any we leave behind.",
-    source: "C.S. Lewis",
-    citation: "Letter to Mary Willis Shelburne",
-    year: 1963,
+    quote: "Every man must decide whether he will walk in the light of creative altruism or in the darkness of destructive selfishness.",
+    source: "M.L.K.",
   },
   {
     quote: "What you see and what you hear depends a great deal on where you are standing. It also depends on what sort of person you are.",
@@ -18,16 +16,12 @@ let quotes = [
     year: 1955,
   },
   {
-    quote: "A proud man is always looking down on things and people; and, of course, as long as you are looking down, you cannot see something that is above you.",
-    source: "C.S. Lewis",
-    citation: "Mere Christianity",
-    year: 1952,
+    quote: "If you can't feed a hundred people, then feed just one..",
+    source: "Mother Teresa",
   },
   {
-    quote: "Don't use words too big for the subject. Don't say infinitely when you mean very; otherwise you'll have no word left when you want to talk about something really infinite.",
-    source: "C.S. Lewis",
-    citation: "Letter to Joan Lancaster",
-    year: 1956,
+    quote: "Just because you are happy it does not mean that the day is perfect but that you have looked beyond its imperfections.",
+    source: "Bob Marley ",
   },
   {
     quote: "Miracles are a retelling in small letters of the very same story which is written across the whole world in letters too large for some of us to see.",
@@ -36,9 +30,9 @@ let quotes = [
     year: 1942,
   },
   {
-    quote: "If I find in myself desires which nothing in this world can satisfy, the only logical explanation is that I was made for another world.",
-    source: "C.S. Lewis",
-    citation: "Mere Christianity",
+    quote: "All that is gold does not glitter, Not all those who wander are lost; The old that is strong does not wither, Deep roots are not reached by the frost. From the ashes a fire shall be woken, A light from the shadows shall spring; Renewed shall be blade that was broken, The crownless again shall be king",
+    source: "J.R.R. Tolkien",
+    citation: "The Fellowship of the Ring",
     year: 1952,
   },
   {
