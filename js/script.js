@@ -24,10 +24,8 @@ let quotes = [
     source: "Bob Marley ",
   },
   {
-    quote: "Miracles are a retelling in small letters of the very same story which is written across the whole world in letters too large for some of us to see.",
-    source: "C.S. Lewis",
-    citation: "Miracles",
-    year: 1942,
+    quote: "A man is but the product of his thoughts; what he thinks, he becomes.",
+    source: "Mahatma Ghandi",
   },
   {
     quote: "All that is gold does not glitter, Not all those who wander are lost; The old that is strong does not wither, Deep roots are not reached by the frost. From the ashes a fire shall be woken, A light from the shadows shall spring; Renewed shall be blade that was broken, The crownless again shall be king",
@@ -36,10 +34,9 @@ let quotes = [
     year: 1952,
   },
   {
-    quote: "The future is something which everyone reaches at the rate of sixty minutes an hour, whatever he does, whoever he is.",
-    source: "C.S. Lewis",
-    citation: "The Screwtape Letters",
-    year: 1942,
+    quote: "It is easier to build strong children than to repair broken men.",
+    source: "Frederick Douglass",
+    year: 1955,
   }
 ]
 
@@ -59,18 +56,18 @@ function getRandomColor() {
 
 
 function printQuote() {
-  //let quoteHTML = document.querySelector('');
   getRandomColor()
-  let randomNumFunc = getRandomQuote() // call the `getRandomQuote` function and assign it to a variable.
-  //let quoteString = "<p>randomNumFunc['quote'] <span>randomNumFunc['source']</span> </p>" // use the properties of the quote object stored in the variable to create your HTML string.
+  let randomNumFunc = getRandomQuote()
+  document.querySelector('#mainQuotePartTwo').style.visibility = 'hidden';
+  
   pQuote.textContent = randomNumFunc['quote'];
   source.textContent = randomNumFunc['source'];
   
-  citation ?
+  ".citation" ?
   citation.textContent = randomNumFunc['citation'] :
   null;
 
-  year ?
+  ".year" ?
   year.textContent = randomNumFunc['year'] :
   null;
   
