@@ -1,7 +1,7 @@
-const quote = document.querySelector('.quote');
-const source = document.querySelector('.source');
-const citation = document.querySelector('.citation');
-const year = document.querySelector('.year');
+const pQuote = document.querySelector('.mainQuotePartOne');
+const pSource = document.querySelector('.source');
+const pCitation = document.querySelector('span.citation');
+const pYear = document.querySelector('span.year');
 const body = document.querySelector('body');
 
 let colorArr = ['coral', 'lightgray', 'cornflowerblue', 'crimson', 'darkorange', 'darkkhaki', 'lightseagreen', 'tomato', 'slateblue', 'violet', 'mediumseagreen', 'dodgerblue', 'darkolivegreen', 'black', 'aquamarine', 'darkseagreen']; 
@@ -18,7 +18,7 @@ let quotes = [
     year: 1955,
   },
   {
-    quote: "If you can't feed a hundred people, then feed just one..",
+    quote: "If you can't feed a hundred people, then feed just one...",
     source: "Mother Teresa",
   },
   {
@@ -53,21 +53,20 @@ function getRandomColor() {
 }
 
 function printQuote() {
-  getRandomColor()
-  let randomNumFunc = getRandomQuote()
-  document.querySelector('#mainQuotePartTwo').style.visibility = 'hidden';
+  getRandomColor() //random background color
+  let randomQuoteObj = getRandomQuote() //random quote object stored in a variable
+  document.querySelector('.mainQuotePartTwo').style.visibility = 'hidden'; //part two of main quote hidden
   
-  quote.textContent = randomNumFunc['quote'];
-  source.textContent = randomNumFunc['source'];
+  pQuote.textContent = randomQuoteObj.quote; // new random quote generated
+  pSource.textContent = randomQuoteObj.source; // source from random quote generated
   
-  if(randomNumFunc['citation']) {
-    citation.textContent = randomNumFunc['citation']
-  }
+  // console.log(randomQuoteObj.citation)
 
-  if(randomNumFunc['year']) {
-    year.textContent = randomNumFunc['year']
-  }
- 
+  // if(randomQuoteObj.citation !== undefined) {
+  //   pCitation.textContent = randomQuoteObj.citation
+  // }
+
+  
 }
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
