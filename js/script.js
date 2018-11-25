@@ -1,8 +1,10 @@
-const pQuote = document.querySelector('.quote');
+const quote = document.querySelector('.quote');
 const source = document.querySelector('.source');
 const citation = document.querySelector('.citation');
 const year = document.querySelector('.year');
 const body = document.querySelector('body');
+
+let colorArr = ['coral', 'lightgray', 'cornflowerblue', 'crimson', 'darkorange', 'darkkhaki', 'lightseagreen', 'tomato', 'slateblue', 'violet', 'mediumseagreen', 'dodgerblue', 'darkolivegreen', 'black', 'aquamarine', 'darkseagreen']; 
 
 let quotes = [
   {
@@ -40,44 +42,32 @@ let quotes = [
   }
 ]
 
-let colorArr = ['coral', 'lightgray', 'cornflowerblue', 'crimson', 'darkorange', 'darkkhaki', 'lightseagreen']
-
 function getRandomQuote() {
   let randomNum = Math.floor(Math.random() * 7) + 1 // generate a random number and store it into a variable
-  return quotes[randomNum] // random number should return an random quote object from the quotes array
-  body.style.backgroundColor = colorArr[randomNum] 
+  return quotes[randomNum] // random number should return an random quote object from the quotes array 
 }
 
 function getRandomColor() {
-  let randomColorNum = Math.floor(Math.random() * 7) + 1 // generate a random number and store it into a variable
-  return body.style.backgroundColor = colorArr[randomColorNum]  // random number should return an random background color from the colorArr
+  let randomColorNum = Math.floor(Math.random() * 16) + 1 // generate a random number and store it into a variable
+  body.style.backgroundColor = colorArr[randomColorNum]  // random number should return an random background color from the colorArr
 }
-
-
 
 function printQuote() {
   getRandomColor()
   let randomNumFunc = getRandomQuote()
   document.querySelector('#mainQuotePartTwo').style.visibility = 'hidden';
   
-  pQuote.textContent = randomNumFunc['quote'];
+  quote.textContent = randomNumFunc['quote'];
   source.textContent = randomNumFunc['source'];
   
-  ".citation" ?
-  citation.textContent = randomNumFunc['citation'] :
-  null;
+  if(randomNumFunc['citation']) {
+    citation.textContent = randomNumFunc['citation']
+  }
 
-  ".year" ?
-  year.textContent = randomNumFunc['year'] :
-  null;
-  
+  if(randomNumFunc['year']) {
+    year.textContent = randomNumFunc['year']
+  }
+ 
 }
-
-
-/***
-  When the "Show another quote" button is clicked, the event listener
-  below will be triggered, and it will call, or "invoke", the `printQuote`
-  function.
-***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
