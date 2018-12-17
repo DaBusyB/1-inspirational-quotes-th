@@ -42,20 +42,32 @@ body {
   position: absolute;
 }
 
+.quote-section {
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid red;
+}
+
 .source {
-  font-size: 1.25rem;;
+  font-size: 1.25rem;
   letter-spacing: 0.05em;
-  line-height: 1.1;
-  text-align: right;
-  margin-right: 4em;
+  /* line-height: 1.1; */
+  /* text-align: right; */
+  /* margin-right: 4em; */
+ 
 }
 
 .source:before {
-  content: "—";
+  content: "~";
 }
 
 .citation {
   font-style: italic;
+  font-size: 1.25rem;
+}
+
+.year {
+  font-size: 1.25rem;
 }
 
 .citation:before {

@@ -1,7 +1,7 @@
 const pQuote = document.querySelector('.mainQuotePartOne');
 const pSource = document.querySelector('.source');
-const pCitation = document.querySelector('span.citation');
-const pYear = document.querySelector('span.year');
+const pCitation = document.querySelector('.citation');
+const pYear = document.querySelector('.year');
 const body = document.querySelector('body');
 
 let colorArr = ['coral', 'lightgray', 'cornflowerblue', 'crimson', 'darkorange', 'darkkhaki', 'lightseagreen', 'tomato', 'slateblue', 'violet', 'mediumseagreen', 'dodgerblue', 'darkolivegreen', 'black', 'aquamarine', 'darkseagreen']; 
@@ -43,29 +43,29 @@ let quotes = [
 ]
 
 function getRandomQuote() {
-  let randomNum = Math.floor(Math.random() * 7) + 1 // generate a random number and store it into a variable
-  return quotes[randomNum] // random number should return an random quote object from the quotes array 
+  let randomNum = Math.floor(Math.random() * 7) + 1 
+  // generate a random number and store it into a variable
+  return quotes[randomNum] 
+  // random number should return an random quote object from the quotes array 
 }
 
 function getRandomColor() {
-  let randomColorNum = Math.floor(Math.random() * 16) + 1 // generate a random number and store it into a variable
-  body.style.backgroundColor = colorArr[randomColorNum]  // random number should return an random background color from the colorArr
+  let randomColorNum = Math.floor(Math.random() * 16) + 1 
+  // generate a random number and store it into a variable
+  body.style.backgroundColor = colorArr[randomColorNum]  
+  // random number should return an random background color from the colorArr
 }
 
 function printQuote() {
-  getRandomColor() //random background color
-  let randomQuoteObj = getRandomQuote() //random quote object stored in a variable
+  getRandomColor() 
+  //random background color
+  let randomQuoteObj = getRandomQuote() 
+  //random quote object stored in a variable
   document.querySelector('.mainQuotePartTwo').style.visibility = 'hidden'; //part two of main quote hidden
   
   pQuote.textContent = randomQuoteObj.quote; // new random quote generated
   pSource.textContent = randomQuoteObj.source; // source from random quote generated
-  
-  // console.log(randomQuoteObj.citation)
-
-  // if(randomQuoteObj.citation !== undefined) {
-  //   pCitation.textContent = randomQuoteObj.citation
-  // }
-
+  pCitation.textContent = randomQuoteObj.citation
   
 }
 
