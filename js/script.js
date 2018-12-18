@@ -1,6 +1,6 @@
 const pQuote = document.querySelector('.mainQuotePartOne');
 const pSource = document.querySelector('.source');
-const pCitation = document.querySelector('.citation');
+const pCitation = document.querySelector('.quote-section .citation');
 const pYear = document.querySelector('.year');
 const body = document.querySelector('body');
 
@@ -22,7 +22,7 @@ let quotes = [
     source: "Mother Teresa",
   },
   {
-    quote: "Just because you are happy it does not mean that the day is perfect but that you have looked beyond its imperfections.",
+    quote: "Just because you are happy it does not mean that the day is perfect, but that you have looked beyond its imperfections.",
     source: "Bob Marley ",
   },
   {
@@ -65,8 +65,18 @@ function printQuote() {
   
   pQuote.textContent = randomQuoteObj.quote; // new random quote generated
   pSource.textContent = randomQuoteObj.source; // source from random quote generated
-  pCitation.textContent = randomQuoteObj.citation
-  
+
+  if (randomQuoteObj.citation) {
+    pCitation.textContent = ", " + randomQuoteObj.citation;
+  } else {
+    pCitation.textContent = "";
+  }
+
+  if (randomQuoteObj.year) {
+    pYear.textContent = ", " + randomQuoteObj.year;
+  } else {
+    pYear.textContent = "";
+  }
 }
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
